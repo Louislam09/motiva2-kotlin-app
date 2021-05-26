@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ListActivity"
+    android:background="@drawable/bg_4"
+    >
+
+    <RelativeLayout
+        android:id="@+id/empty_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#292a2b63"
+        android:visibility="invisible"
+        >
+
+        <RelativeLayout
+            android:id="@+id/emptyMenuContainer"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:orientation="horizontal"
+            android:gravity="center"
+            >
+
+            <Button
+                android:id="@+id/emptyBackButton"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:background="@drawable/ic_back_foreground"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                />
+
+            <TextView
+                android:layout_alignParentRight="true"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/favoritos"
+                android:textSize="28sp"
+                android:fontFamily="@font/baloo"
+                android:textColor="@color/white"
+                android:gravity="center"
+                android:textAlignment="center"
+                android:layout_alignParentEnd="true" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/emptyContentContainer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_below="@id/emptyMenuContainer"
+            >
+
+            <TextView
+                android:id="@+id/emptyTvPhrase"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/baloo"
+                android:gravity="center_horizontal"
+                android:text="@string/emptyMessage"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="24sp"
+                />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        tools:listitem="@layout/fav_phrase" />
+
+</RelativeLayout>

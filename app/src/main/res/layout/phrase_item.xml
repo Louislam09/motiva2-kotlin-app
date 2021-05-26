@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/phraseContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_8"
+        android:gravity="top"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#292a2b63"
+        >
+
+        <RelativeLayout
+            android:id="@+id/menuContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+
+            <Button
+                android:id="@+id/starButton"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:background="@drawable/ic_start_foreground"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+
+            <Button
+                android:id="@+id/menuButton"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:background="@drawable/ic_menu_foreground"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/contentContainer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_below="@id/menuContainer"
+            android:layout_above="@id/actionContainer"
+            >
+
+            <TextView
+                android:id="@+id/tvPhrase"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/baloo"
+                android:gravity="center_horizontal"
+                android:text="@string/default_phrase"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="22sp"
+                />
+
+            <TextView
+                android:id="@+id/tvAuthor"
+                android:fontFamily="@font/baloo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="end"
+                android:text="@string/author"
+                android:textAlignment="textEnd"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:textStyle="italic"
+                />
+
+        </LinearLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/actionContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_alignParentBottom="true"
+            >
+
+            <Button
+                android:layout_alignParentRight="true"
+                android:id="@+id/shareButton"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:background="@drawable/ic_share_foreground"
+                android:layout_alignParentEnd="true"
+                />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/downloadContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingRight="10dp"
+            android:layout_above="@id/actionContainer"
+            >
+            <Button
+                android:layout_alignParentRight="true"
+                android:id="@+id/downloadButton"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="@drawable/ic_download_icon"
+                android:layout_alignParentEnd="true"
+                />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/ownerTagContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal"
+            android:visibility="invisible">
+
+            <TextView
+                android:id="@+id/ownerTag"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/baloo"
+                android:gravity="end"
+                android:text="@string/owner_tag"
+                android:textAlignment="textEnd"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:textStyle="italic"
+                android:visibility="visible" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

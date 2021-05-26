@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Motiva2</string>
+    <string name="author">Author</string>
+    <string name="owner_tag">MOTIVA2.lam09</string>
+    <string name="default_phrase">Cuando tus deseos sean lo suficientemente fuertes, pareceras poseer poderes sobrehumanos para lograrlo. Cuando tus deseos sean lo suficientemente fuertes, pareceras poseer poderes sobrehumanos para lograrlo.</string>
+    <string name="favoritos">Favoritas</string>
+    <string name="emptyMessage">Lista de favaritos vacia</string>
+</resources>
